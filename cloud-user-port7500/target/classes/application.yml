@@ -1,0 +1,21 @@
+server:
+  7500
+
+spring:
+  application:
+    name: cloud-user-port7500
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://127.0.0.1:/3306/aishop
+    username: root
+    password: %G7Fd8rjOg#U
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)
+service-url:
+  nacos-user-service: http://nacos-cloud-user-port
