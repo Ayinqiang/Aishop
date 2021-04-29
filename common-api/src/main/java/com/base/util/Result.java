@@ -11,14 +11,14 @@ public class Result<T> {
     private T data;  //返回的数据
 
     //成功快速返回成功状态以及消息
-    private Result(T data) {
+    public Result(T data) {
         this.code = 4000;
         this.msg = "success";
         this.data = data;
     }
 
     //失败快速构建返回失败对象
-    private Result(String msg,int code) {
+    public Result(String msg, int code) {
         this.code = code;
         this.msg = "msg";
     }

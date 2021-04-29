@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-api" />
         <module name="cloud-user-port7500" />
+        <module name="api-util-commons" />
       </profile>
     </annotationProcessing>
   </component>
