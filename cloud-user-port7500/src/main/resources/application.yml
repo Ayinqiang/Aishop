@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-user-port7500
+    name: cloud-user-port
   cloud:
     nacos:
       discovery:

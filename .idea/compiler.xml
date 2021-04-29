@@ -12,5 +12,8 @@
         <module name="api-util-commons" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-user-port7501" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

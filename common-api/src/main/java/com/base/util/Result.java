@@ -7,12 +7,17 @@ import lombok.Data;
 @AllArgsConstructor
 public class Result<T> {
     private int code; //返回代码
+    /*
+    *  2000 成功
+    *  4000 路径问题
+    *  5000 服务器内部错误
+    * */
     private String msg; //返回的消息
     private T data;  //返回的数据
 
     //成功快速返回成功状态以及消息
     public Result(T data) {
-        this.code = 4000;
+        this.code = 2000;
         this.msg = "success";
         this.data = data;
     }
