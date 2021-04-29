@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>AiShop</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.base.aishop</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -76,6 +76,12 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
+        </dependency>
+        <!--自定义的common工具包-->
+        <dependency>
+            <groupId>com.base.aishop</groupId>
+            <artifactId>api-util-commons</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
