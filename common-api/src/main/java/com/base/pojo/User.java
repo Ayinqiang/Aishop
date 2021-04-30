@@ -18,5 +18,11 @@ public class User {
     * 0 代表用户
     * 1 代表管理员
     * 2 代表超级管理员 */
-    private int authorities;  //用户权限角色状态
+    private Integer authorities;  //
+
+    public User(User user){
+        this.uid = user.getUid();
+        this.psw = user.getPsw();
+        this.authorities = user.getAuthorities();
+    }
 }

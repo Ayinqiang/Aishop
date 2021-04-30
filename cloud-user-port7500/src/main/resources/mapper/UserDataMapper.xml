@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--上面的是Mybatis的约束-->
+<mapper namespace="com.base.user.dao.UserDataMapper">
+    <insert id="InsertUserData" parameterType="UserData">
+        INSERT INTO user_data(uid,name,sign,avatar,email,phone,sex) VALUES
+         (#{ud.uid},
+         #{ud.name},
+         #{ud.sign},
+         #{ud.avatar},
+         #{ud.email},
+         #{ud.phone},
+         #{ud.sex})
+    </insert>
+</mapper>

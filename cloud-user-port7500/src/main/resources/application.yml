@@ -25,6 +25,7 @@ service-url:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.base.pojo
 #mybatis配置
 management:
   health:

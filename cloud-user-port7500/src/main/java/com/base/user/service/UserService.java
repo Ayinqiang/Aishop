@@ -1,5 +1,6 @@
 package com.base.user.service;
 
+import com.base.pojo.User;
 import com.base.pojo.UserData;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +13,17 @@ import org.springframework.stereotype.Component;
 public interface UserService {
 
     /**
-     * @Param uid 用户id
-     * @Description : 查询用户是否存在
+     * @Description: 检查用户是否存在
+     * @param uid
+     * @return 查询结果
      */
-    public boolean userIdExisted(Integer uid);
+    public Integer userIdExisted(Integer uid);
 
+    /**
+     * @Description: 注册时用于插入用户
+     * @param user
+     */
+    public void InsertUser(User user);
     public UserData getUserData();
     public void updateUserData();
 }

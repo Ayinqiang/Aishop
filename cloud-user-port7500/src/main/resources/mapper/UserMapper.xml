@@ -2,9 +2,19 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
 <!--上面的是Mybatis的约束-->
-<mapper namespace="com.base.user.dao.UserMapper.java">
-    <select id="SelectUserById" parameterType="integer">
-        SELECT uid FROM user WHERE uid = #{uid}
+<mapper namespace="com.base.user.dao.UserMapper">
+    <select id="SelectUserById" parameterType="integer" resultType="integer">
+        SELECT uid FROM user_base WHERE uid = #{uid}
     </select>
+
+    <insert id="InsertUser" parameterType="User">
+        INSERT INTO user_base(uid,psw,authorities)
+         VALUES
+         ( #{user.uid},
+         #{user.psw},
+         #{user.authorities})
+    </insert>
 </mapper>

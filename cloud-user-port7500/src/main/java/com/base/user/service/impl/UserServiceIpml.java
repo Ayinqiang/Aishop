@@ -1,13 +1,15 @@
 package com.base.user.service.impl;
 
+import com.base.pojo.User;
 import com.base.pojo.UserData;
 import com.base.user.dao.UserMapper;
 import com.base.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -23,14 +25,22 @@ public class UserServiceIpml implements UserService {
     UserMapper userMapper;
 
     @Override
-    public boolean userIdExisted(Integer uid) {
+    public Integer userIdExisted(Integer uid) {
+        Integer res = null;
         try{
-            Integer res = userMapper.SelectUserById(uid);
-            System.out.println(res);
+            res = userMapper.SelectUserById(uid);
         }catch (Exception e){
-
+            logger.error("查询失败");
         }
-        return false;
+        return res;
+    }
+
+
+
+    @Override
+    @Transactional
+    public void InsertUser(User user) {
+        userMapper.InsertUser(user);
     }
 
     @Override
