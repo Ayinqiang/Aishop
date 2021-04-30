@@ -6,6 +6,6 @@ package com.base.pojo;
  * @Descripton :
  */
 public class OrderDetail {
-    private int orderId;          //订单Id
-    private int storeId;          //物品Id
+    private Integer orderId;          //订单Id
+    private Integer storeId;          //物品Id
 }

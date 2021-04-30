@@ -1,6 +1,9 @@
+
+#提供外部访问端口
 server:
   port: 7500
 
+#Spring配置
 spring:
   application:
     name: cloud-user-port
@@ -9,9 +12,9 @@ spring:
       discovery:
         server-addr: localhost:8848
   datasource:
-    url: jdbc:mysql://localhost/aishop?serverTimezone=UTC&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
-    username: root
-    password: "%G7Fd8rjOg#U"
+    url: jdbc:mysql://8.140.187.154/aishop?serverTimezone=UTC&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+    username: pyq
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -19,3 +22,11 @@ spring:
 #消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)
 service-url:
   nacos-user-service: http://nacos-cloud-user-port
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#mybatis配置
+management:
+  health:
+    redis:
+      enabled: false

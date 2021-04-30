@@ -1,7 +1,6 @@
 package com.base.util;
 
 import cn.hutool.core.lang.Assert;
-import com.sun.deploy.security.SelectableSecurityManager;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;

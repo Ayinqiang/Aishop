@@ -11,16 +11,16 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Order {
-    private int orderId;          //订单id
-    private int buyerId;          //买家id
-    private int sellerId;         //卖家id
-    private int state;            //订单状态
+    private Integer orderId;          //订单id
+    private Integer buyerId;          //买家id
+    private Integer sellerId;         //卖家id
+    private Integer state;            //订单状态
     /*
     * 0 订单未完成 正常状态
     * 1 订单未完成 异常  售后
     * 2 订单未完成 退款
     * 3 订单已完成*/
-    private double overall;       //订单总金额
+    private Double overall;       //订单总金额
     private String createTime;    //订单创建时间
     private String endTime;       //订单关闭时间
 }

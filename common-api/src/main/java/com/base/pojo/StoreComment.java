@@ -12,6 +12,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class StoreComment {
-    private int orderId;   //订单id
-    private int storeId;   //物品id
+    private Integer orderId;   //订单id
+    private Integer storeId;   //物品id
 }

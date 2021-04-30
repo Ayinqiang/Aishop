@@ -1,1 +1,9 @@
+com\base\pojo\Order.class
+com\base\pojo\StoreComment.class
+com\base\util\CookieUtils.class
+com\base\pojo\Store.class
 com\base\util\Result.class
+com\base\util\AssertUtils.class
+com\base\pojo\UserData.class
+com\base\pojo\OrderDetail.class
+com\base\pojo\User.class
