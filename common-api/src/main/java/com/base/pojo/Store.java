@@ -11,7 +11,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Store {
-    private Integer storeId;          //物品Id
+    private int id;               //自增id
+    private String storeId;          //物品Id
     private String name;          //用户名
     private String[] arrImg;      //图片数组
     private String text;          //物品描述
