@@ -7,7 +7,8 @@ package com.base.pojo;
  */
 public class OrderDetail {
     private int id;                   //自增id
-    private Integer orderId;          //订单Id
+    private String orderId;          //订单Id
     private String sellerId;          //商户id
     private String storeId;          //物品Id
+    private Integer number;         //数量
 }

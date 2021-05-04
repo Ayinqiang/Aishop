@@ -13,7 +13,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class User {
     private int id;            //自增id
-    private Integer uid;       //用户id号码
+    private String uid;       //用户id号码
     private String psw;       //用户密码
     /*
     * 0 代表用户
