@@ -6,15 +6,8 @@
 
 <!--上面的是Mybatis的约束-->
 <mapper namespace="com.base.user.dao.UserMapper">
-    <select id="SelectUserById" parameterType="integer" resultType="integer">
-        SELECT uid FROM user_base WHERE uid = #{uid}
+    <select id="SelectUserById" parameterType="string" resultType="string">
+        SELECT uid FROM user_data WHERE uid = #{uid}
     </select>
 
-    <insert id="InsertUser" parameterType="User">
-        INSERT INTO user_base(uid,psw,authorities)
-         VALUES
-         ( #{user.uid},
-         #{user.psw},
-         #{user.authorities})
-    </insert>
 </mapper>

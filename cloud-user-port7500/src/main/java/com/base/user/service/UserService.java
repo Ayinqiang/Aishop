@@ -17,13 +17,6 @@ public interface UserService {
      * @param uid
      * @return 查询结果
      */
-    public Integer userIdExisted(Integer uid);
+    public boolean userIdExisted(String uid);
 
-    /**
-     * @Description: 注册时用于插入用户
-     * @param user
-     */
-    public void InsertUser(User user);
-    public UserData getUserData();
-    public void updateUserData();
 }

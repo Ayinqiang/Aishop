@@ -63,7 +63,7 @@ public class CookieUtils {
             //cookie需求定制化
             if(maxAge !=null) cookie.setMaxAge(maxAge.intValue());
             if(!Strings.isNotBlank(path)&&!Strings.isNotEmpty(path)) cookie.setPath(path);
-            if(!Strings.isNotBlank(domain)&&!Strings.isNotEmpty(domain)) cookie.setDomain(domain);
+            if(!Strings.isNotBlank(domain)&&!Strings.isNotEmpty(domain)&&domain!=null) cookie.setDomain(domain);
             if(secure !=null) cookie.setSecure(secure.booleanValue());
             response.addCookie(cookie);
         } catch (UnsupportedEncodingException e) {

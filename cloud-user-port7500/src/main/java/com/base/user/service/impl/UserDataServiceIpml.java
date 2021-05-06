@@ -1,5 +1,6 @@
 package com.base.user.service.impl;
 
+import com.base.pojo.User;
 import com.base.pojo.UserData;
 import com.base.user.dao.UserDataMapper;
 import com.base.user.service.UserDataService;
@@ -31,6 +32,20 @@ public class UserDataServiceIpml implements UserDataService {
      */
     @Override
     public void InsertUserData(UserData userData) {
-        userDataMapper.InsertUser(userData);
+        log.info("------------------开始插入-------------\n" + userData.toString());
+        userDataMapper.InsertUserData(userData);
+        log.info("------------------结束插入-------------");
+    }
+
+    /**
+     *
+     * @param uid
+     * @Descripton 获取用户信息 返回至前端
+     */
+    @Override
+    public UserData GetUserData(String uid) {
+        UserData userData = userDataMapper.GetUserData(uid);
+        userData.setPsw("null");
+        return userData;
     }
 }

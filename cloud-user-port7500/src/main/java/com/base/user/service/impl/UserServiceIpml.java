@@ -25,31 +25,13 @@ public class UserServiceIpml implements UserService {
     UserMapper userMapper;
 
     @Override
-    public Integer userIdExisted(Integer uid) {
-        Integer res = null;
-        try{
-            res = userMapper.SelectUserById(uid);
-        }catch (Exception e){
-            logger.error("查询失败");
-        }
-        return res;
+    public boolean userIdExisted(String uid) {
+        String uids = null;
+               uids = userMapper.SelectUserById(uid);
+        if(uid!=null)
+            return true;
+        else
+            return false;
     }
 
-
-
-    @Override
-    @Transactional
-    public void InsertUser(User user) {
-        userMapper.InsertUser(user);
-    }
-
-    @Override
-    public UserData getUserData() {
-        return null;
-    }
-
-    @Override
-    public void updateUserData() {
-
-    }
 }

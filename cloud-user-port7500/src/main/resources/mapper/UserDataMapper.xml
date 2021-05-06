@@ -6,8 +6,10 @@
 <!--上面的是Mybatis的约束-->
 <mapper namespace="com.base.user.dao.UserDataMapper">
     <insert id="InsertUserData" parameterType="UserData">
-        INSERT INTO user_data(uid,name,sign,avatar,email,phone,sex) VALUES
+        INSERT INTO user_data(uid,psw,authorities,name,sign,avatar,email,phone,sex) VALUES
          (#{ud.uid},
+         #{ud.psw},
+         #{ud.authorities},
          #{ud.name},
          #{ud.sign},
          #{ud.avatar},
@@ -15,4 +17,12 @@
          #{ud.phone},
          #{ud.sex})
     </insert>
+
+    <select id="GetUserData" parameterType="string" resultType="UserData">
+        SELECT * FROM user_data WHERE uid = #{uid}
+    </select>
+
+    <select id="GetPswByUid" parameterType="string" resultType="string">
+        SELECT psw FROM user_data WHERE uid = #{uid}
+    </select>
 </mapper>

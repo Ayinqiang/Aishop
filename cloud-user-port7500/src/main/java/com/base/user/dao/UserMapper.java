@@ -13,9 +13,6 @@ public interface UserMapper {
      * @Description: 检测用户账号是否存在
      * @Params uid： 用户id号码
      */
-    public Integer SelectUserById(@Param("uid") Integer uid);
-    public void ReregistyUser(@Param("User") User user);
+    public String SelectUserById(@Param("uid") String uid);
 
-
-    public void InsertUser(@Param(value = "user") User user);
 }

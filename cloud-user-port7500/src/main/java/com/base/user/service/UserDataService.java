@@ -10,4 +10,6 @@ import com.base.pojo.UserData;
 public interface UserDataService {
 
     public void InsertUserData(UserData userData);
+
+    public UserData GetUserData(String uid);
 }

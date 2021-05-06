@@ -1,6 +1,7 @@
 package com.base.user.dao;
 
 import com.base.pojo.UserData;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +12,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserDataMapper {
+    public void InsertUserData(@Param("ud")UserData userData);
 
-    public void InsertUser(@Param("ud")UserData userData);
+    public UserData GetUserData(@Param("uid")String uid);
+
+    public String GetPswByUid(@Param("uid")String uid);
 }
