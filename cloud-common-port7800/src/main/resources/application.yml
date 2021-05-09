@@ -1,12 +1,11 @@
-
-#提供外部访问端口
 server:
-  port: 7500
+  port: 7800
+
 
 #Spring配置
 spring:
   application:
-    name: cloud-user-port
+    name: cloud-common-port
   cloud:
     nacos:
       discovery:
@@ -23,7 +22,6 @@ spring:
       additional-paths: src/main/java #重启目录
       exclude: WEB-INF/**
 
-
 #消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)
 service-url:
   nacos-user-service: http://nacos-cloud-user-port
@@ -31,8 +29,3 @@ service-url:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.base.pojo
-#mybatis配置
-management:
-  health:
-    redis:
-      enabled: false

@@ -70,7 +70,7 @@ public class UserController {
         }
         String TruePsw = userDataMapper.GetPswByUid(uid);
         log.info(TruePsw);
-        if (TruePsw.equals(psw)) {
+        if (TruePsw!=null && TruePsw.equals(psw)) {
             //获取用户信息
             UserData userData = userDataMapper.GetUserData(uid);
             //添加用户Cookie

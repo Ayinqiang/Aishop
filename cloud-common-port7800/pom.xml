@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-user-port7500</artifactId>
-    <!--本pom.xml引入nacos-->
+    <artifactId>cloud-common-port7800</artifactId>
     <dependencies>
         <!--springcloud alibaba nacos-->
         <dependency>

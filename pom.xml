@@ -11,6 +11,7 @@
     <modules>
         <module>cloud-user-port7500</module>
         <module>common-api</module>
+        <module>cloud-common-port7800</module>
     </modules>
     <properties>
 

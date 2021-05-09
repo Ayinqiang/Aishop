@@ -25,7 +25,7 @@ public class Result<T> {
     //失败快速构建返回失败对象
     public Result(String msg, int code) {
         this.code = code;
-        this.msg = "msg";
+        this.msg = msg;
     }
 
     /**
