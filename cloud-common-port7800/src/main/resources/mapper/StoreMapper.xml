@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.base.common.dao.StoreMapper">
+    <resultMap id="storeMap" type="com.base.pojo.Store">
+        <id column="id" property="id"></id>
+        <result column="store_id" property="storeId"></result>
+        <result column="names" property="names"></result>
+        <result column="description" property="description"></result>
+        <result column="create_date" property="createDate"></result>
+        <result column="store_class" property="storeClass"></result>
+        <result column="price" property="price"></result>
+        <collection column="store_id" property="arrImg"
+                    javaType="java.util.ArrayList" ofType="com.base.pojo.StoreImgs" select="getStoreImgsList"/>
+    </resultMap>
+
+    <resultMap id="storeImgsMap" type="com.base.pojo.StoreImgs">
+        <id column="id" property="id" ></id>
+        <result column="store_id" property="storeId" ></result>
+        <result column="imgs" property="imgs" ></result>
+    </resultMap>
+
+
+    <select id="getAllStoreList" resultMap="storeMap">
+        SELECT * FROM store
+    </select>
+
+    <select id="getStoreImgsList" resultMap="storeImgsMap">
+        select * FROM store_imgs WHERE store_id = #{storeId}
+    </select>
+
+
+
+
+</mapper>

@@ -81,4 +81,12 @@ public class UserController {
         else
             return Result.error("密码错误", 2001);
     }
+
+    @ApiOperation(value = "获取用户相关信息",notes = "传入用户id")
+    @GetMapping("/UserInfo")
+    public Result<UserData> getUserInfo(HttpServletRequest request,HttpServletResponse response){
+        String uid = request.getParameter("uid");
+        UserData userData = userDataMapper.GetUserData(uid);
+        return Result.success(userData);
+    }
 }
